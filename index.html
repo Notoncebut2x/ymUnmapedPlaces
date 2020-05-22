@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>YouthMappers Virtual Training</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/youthMappers.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+			
+				<section>
+						<h1>Mapping Unmapped Places in OSM</h1>
+						<h3 style="padding:8px">youthmappers, May 22nd</h3>
+					<!-- <h3 style="text-align:left;background-color: #B3D3E8; color:white;padding:10px"">YouthMappers, April 17th</h3>-->	
+				</section>
+
+				<section>
+					<h3 style="background-color:#fc6320;">Who is this dude on Zoom?</h3>
+					<h3 style="background-color:#33426d;">What is he going to talk about?</h3>
+					<h3 style="background-color:#91ccca;">Why should I care?</h3>
+				</section>
+
+				<section>
+					<h2>Background</h2>
+					<h3>Pascal Neis previously ran a studies in 2010, 2011, and 2016 to identify areas underrepresented (unmapped) in OSM</h3>
+					<h3>The most recent study is from January 2020 and has identified hundreds of thousands places in OSM</h3>
+				</section>
+
+				<section>
+					<h2>Methodology</h2>
+					<h3>Use every place node of the OSM dataset which has a village-tag (place=village).</h3>
+					<h3>Search in a radius of ca. 700 m for a street with one of the following highway-values: residential, unclassified or service.</h3>
+					<h3>If no street can be found, mark the place as “unmapped”!</h3>
+				</section>
+
+				<section>
+					<h3>OSM is an ecosystem with many tools and software built around the mapping database.</h3>	
+				</section>
+
+				<section>
+					<h3>Some of the tools built off of OSM are:
+						<ul>
+							<li>The ID and JOSM editors</li>
+							<li>OSMCha</li>
+							<li>MapRoulette</li>
+							<li>ResultsMap</li>
+							<li>FieldPapers</li>
+							<li>Osmose</li>
+						</ul>
+					</h3>
+				</section>
+
+				<section>
+					<h2>OSMCha</h2>
+				</section>
+
+				<section>
+					<h3>OSMCha = OpenStreetMap Changeset Analyzer.</h3>
+					<h3>Its a tool that can be used for validation and data quality analysis. </h3>
+					<h3>Created by <a href='https://www.openstreetmap.org/user/wille'>Wille Marcel</a> in 2015 and is hosted by MapBox</h3>
+				</section>
+
+				<section>
+					<h2>What did Rory do?</h2><
+					<h3>Created a script to join the data with Natural Earth Administrative boundaries using mapshaper</h3>
+					<h3>Filtered the "unmapped" areas by country</h3>
+					<h3>Created example mapRoulette Projects</h3>
+				</section>
+
+				<section>
+					<h2>DEMO!!!</h2>
+				</section>
+
+				<section>
+					<h3>Fill out this <a ref="https://forms.gle/BdGLTzQdmku6C7Qh9">form</a> if you are interested in creating a mapRoulette Challenge of unmapped places for your chapter</h3>
+				</section>
+
+				<section>
+					<h3>Questions</h3>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
